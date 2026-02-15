@@ -1,4 +1,4 @@
-# Car Rental Platform
+# Eloquent Car Rental (Laravel)
 
 Cardex is a comprehensive car rental platform designed to simplify the process of renting cars. This repository contains the code for the website and administration panel built using Laravel and Bootstrap respectively.
 
@@ -23,24 +23,56 @@ Cardex is a comprehensive car rental platform designed to simplify the process o
 - Manage car listings, including creation, editing, and deletion.
 - Track and manage car availability and reservations.
 
-## Getting Started
+## Setup
+1. Clone the repository:
 
-To set up and run Cardex on your local machine, follow these steps:
+```bash
+   git clone https://github.com/Stucom-Pelai/MP0613_RA6RA7RA8_Eloquent-Car.git
+```
 
-1. Clone this repository to your local machine.
-2. Configure your development environment (e.g., PHP, MySQL).
-3. Create a new MySQL database for Cardex.
-4. Copy the `.env.example` file and rename it to `.env`. Update the necessary configuration variables, including the database credentials.
-5. Install the project dependencies by running `composer install`.
-6. Generate an application key by running `php artisan key:generate`.
-7. Run the database migrations using `php artisan migrate`.
-9. Start the development server using `php artisan serve`.
-10. Access the Cardex website and administration panel by visiting `http://localhost:8000` and `http://localhost:8000/admin` respectively.
+2. Install Composer dependencies:
 
-## License
+```bash
+composer install
+```
 
-Cardex is released under the [MIT License](LICENSE). You are free to use, modify, and distribute this project for personal or commercial purposes.
+3. Copy the example enviroment file:
 
-## Acknowledgments
+```bash
+cp .env.example .env
+```
 
-We would like to extend our gratitude to the Laravel and Bootstrap communities for their fantastic frameworks that made developing Cardex a delightful experience.
+4. Generate an application key
+
+```bash
+php artisan key:generate
+```
+
+5. Create a symbolic link from 'public/storage' to 'storage/app/public'
+
+```bash
+php artisan storage:link
+```
+
+6. Clear compiled view files
+
+```bash
+php artisan view:clear
+```
+
+7. Create mp0613_car database
+
+
+8. Run migrations and seed the database
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+9. Start the Laravel development server 
+
+```bash
+php artisan serve
+```
+
+10. You are all set
